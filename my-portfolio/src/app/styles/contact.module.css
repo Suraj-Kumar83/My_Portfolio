@@ -1,0 +1,261 @@
+/* ===========================
+   Base Styles (Mobile First)
+=========================== */
+.contactSection {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: "Libertinus Mono", monospace;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title span {
+  color: #38bdf8;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Contact Grid */
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.contactCard {
+  background: rgba(30, 41, 59, 1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: white;
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: rgb(242, 243, 244);
+}
+
+.iconContainer {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+}
+
+.iconContainer svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+.contactDetails {
+  flex: 1;
+}
+
+.contactTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #f8fafc;
+}
+
+.contactValue {
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+/* Contact Form */
+.contactForm {
+  background: rgba(30, 41, 59, 1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #f8fafc;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   Tablet Styles ≥640px
+=========================== */
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .divider {
+    width: 70px;
+  }
+
+  .contactGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .contactCard {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .iconContainer {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .iconContainer svg {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .formTitle {
+    font-size: 1.4rem;
+  }
+
+  .contactForm {
+    padding: 2rem;
+  }
+}
+
+/* ===========================
+   Laptop/Desktop Styles ≥1024px
+=========================== */
+@media (min-width: 1024px) {
+  .contactSection {
+    padding: 4rem 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .divider {
+    width: 80px;
+  }
+
+  .contactGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .contactCard {
+    padding: 2rem;
+  }
+
+  .contactTitle {
+    font-size: 1.25rem;
+  }
+
+  .contactValue {
+    font-size: 1rem;
+  }
+
+  .contactForm {
+    padding: 2.5rem;
+  }
+}

@@ -1,0 +1,264 @@
+/* ===========================
+   Base Styles (Mobile First)
+=========================== */
+.educationSection {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: "Libertinus Mono", monospace;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title span {
+  color: #38bdf8;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 1rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #38bdf8, #818cf8);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 3rem;
+}
+
+.timelineContent {
+  background: rgba(30, 41, 59, 1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.timelineItem:hover .timelineContent {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.iconCircle {
+  position: absolute;
+  left: -1.5rem;
+  top: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.timelineDetails {
+  margin-left: 0.5rem;
+}
+
+.degree {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #f8fafc;
+}
+
+.institution {
+  font-size: 1rem;
+  color: #38bdf8;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.year,
+.grade {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.year::before {
+  content: "📅";
+}
+
+.grade::before {
+  content: "🏆";
+}
+
+.description {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Tablet Styles ≥640px
+=========================== */
+@media (min-width: 640px) {
+  .educationSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .divider {
+    width: 70px;
+  }
+
+  .timeline::before {
+    left: 40px;
+    width: 3px;
+  }
+
+  .timelineItem {
+    padding-left: 3.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .iconCircle {
+    left: -2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .icon {
+    font-size: 1.75rem;
+  }
+
+  .degree {
+    font-size: 1.4rem;
+  }
+
+  .institution {
+    font-size: 1.05rem;
+  }
+
+  .meta {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+/* ===========================
+   Laptop/Desktop Styles ≥1024px
+=========================== */
+@media (min-width: 1024px) {
+  .educationSection {
+    padding: 4rem 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .divider {
+    width: 80px;
+  }
+
+  .timeline {
+    max-width: 900px;
+  }
+
+  .timeline::before {
+    left: 50px;
+    width: 4px;
+  }
+
+  .timelineItem {
+    padding-left: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .iconCircle {
+    left: -2.5rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .degree {
+    font-size: 1.5rem;
+  }
+
+  .institution {
+    font-size: 1.1rem;
+  }
+}

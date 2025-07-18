@@ -1,0 +1,224 @@
+/* ===========================
+   Base Styles (Mobile First)
+=========================== */
+.section {
+  min-height: 10vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: "Libertinus Mono", monospace;
+}
+
+.title span {
+  color: #38bdf8;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #2461b7;
+  font-family: "Libertinus Mono", monospace;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  margin: 0.5rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+/* Filter Buttons */
+.filterContainer {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  scrollbar-width: none; /* Firefox */
+  font-family: "Libertinus Mono", monospace;
+}
+.filterContainer::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.filterBtn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(30, 41, 59, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.filterBtn:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+.filterBtn.active {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+/* Skills Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+/* Skill Card */
+.card {
+  background: rgba(30, 41, 59, 1);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Libertinus Mono", monospace;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Image Container */
+.imgContainer {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  padding: 0.8rem;
+}
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+.card:hover .img {
+  transform: scale(1.1);
+}
+
+.name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #f8fafc;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.frontend {
+  background-color: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+.backend {
+  background-color: rgba(74, 222, 128, 0.1);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+}
+.tools {
+  background-color: rgba(249, 168, 212, 0.1);
+  color: #f9a8d4;
+  border: 1px solid rgba(249, 168, 212, 0.2);
+}
+.others {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ead42f;
+  border: 1px solid rgba(249, 168, 212, 0.2);
+}
+
+/* ===========================
+   Tablet ≥640px
+=========================== */
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+  }
+  .imgContainer {
+    width: 70px;
+    height: 70px;
+  }
+  .name {
+    font-size: 1rem;
+  }
+}
+
+/* ===========================
+   Laptop/Desktop ≥1024px
+=========================== */
+@media (min-width: 1024px) {
+  .section {
+    padding: 3rem 2rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1.75rem;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 2rem;
+  }
+  .imgContainer {
+    width: 80px;
+    height: 80px;
+  }
+  .name {
+    font-size: 1.1rem;
+  }
+}
