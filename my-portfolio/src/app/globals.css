@@ -8,3 +8,28 @@
   -webkit-text-fill-color: transparent;
   font-family: 'Montserrat', sans-serif;
 }
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px; /* offset for fixed navbar */
+}
+
+/* Each section has enough vertical space */
+.section {
+  min-height: 100vh;
+  padding: 4rem 1rem; /* base padding */
+}
+
+/* Tablet adjustments */
+@media (min-width: 640px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+}
+
+/* Laptop/Desktop adjustments */
+@media (min-width: 1024px) {
+  .section {
+    padding: 6rem 4rem;
+  }
+}

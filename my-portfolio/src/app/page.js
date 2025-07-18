@@ -4,30 +4,30 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import "./globals.css";
 
 export default function Home() {
   return (
-    <main>
+    <main className="main">
       <Navbar />
-      <section id="about" style={{ height: "100vh", marginTopTop: "80px" }}>
+      <section id="about" className="section">
         <About />
       </section>
 
-      <section id="skills" style={{ height: "100vh", marginTop: "100px" }}>
+      <section id="skills" className="section">
         <Skills />
       </section>
 
-      <section id="projects" style={{ height: "100vh", marginTop: "240px" }}>
+      <section id="projects" className="section">
         <Projects />
       </section>
 
-      <section id="educations" style={{ height: "100vh", marginTop: "880px" }}>
-        <Education/>
+      <section id="educations" className="section">
+        <Education />
       </section>
 
-
-      <section id="contact" style={{ height: "100vh", paddingTop: "350px" }}>
-        <Contact/>
+      <section id="contact" className="section">
+        <Contact />
       </section>
     </main>
   );
