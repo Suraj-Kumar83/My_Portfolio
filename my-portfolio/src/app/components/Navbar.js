@@ -36,7 +36,7 @@ export default function Navbar() {
           className={styles.logo}
           onClick={() => handleLinkClick("")}
         >
-          <span className={styles.logoText}>SURAJ&apos; </span>
+          <span className={styles.logoText}>SURAJ&apos;s</span>
           <span className={styles.logoHighlight}>Portfolio</span>
         </Link>
 
