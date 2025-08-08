@@ -63,6 +63,35 @@ const Projects = () => {
       deploy: "https://ayush-startup-frontend.vercel.app/",
       image: "/ayushStartup.png",
     },
+    {
+      id: 6,
+      title: "Technology and Pre-Incubation Cell Website-TPIC",
+      description:
+        "Enhanced the TPIC E-Cell website with Supabase backend, admin authentication, dynamic updates, multi-year data viewing, and responsive UI—serving ~100 users weekly.",
+      tags: [
+        "React.js",
+        "Node.js",
+        "Express",
+        "Supabase",
+        "Nodemailer",
+      ],
+      github: "https://github.com/Suraj-Kumar83/TpicEcell",
+      deploy: "https://www.tpic.co.in/",
+      image: "/TPIC.png",
+    },
+
+      {
+      id: 7,
+      title: "Dr.Ambedkar Excellence Centre Website-DACE",
+      description:
+        "Developed a real-time website for the DACE (Dr. Ambedkar Centre of Excellence) department at HNB Garhwal University, providing complete information and enhancing its digital presence",
+      tags: [
+        "Next.js",
+      ],
+      github: "https://github.com/Suraj-Kumar83/DACE-Profile",
+      deploy: "https://hnbgu-dace.vercel.app/",
+      image: "/DACE.png",
+    },
   ];
 
   return (
